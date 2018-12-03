@@ -13,7 +13,7 @@ Following values are requested from a KOSTAL Piko inverter:
 * Battery - Temperature (celsius°)
 * Battery - Voltage (V)
 * Battery - Current (A)
-* Battery - Charging/Discharging (true=Charging; false=Discharging)
+* Battery - Charging/Discharging (1=Charging; 0=Discharging)
 * Consumed Energy from Energy Provider (W)
 * Consumed Energy self generated (W)
 
