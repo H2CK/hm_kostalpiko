@@ -1,0 +1,31 @@
+# IP address/hostname or https:// URI and login credentials of
+# KOSTAL Piko devices
+HM_PIKO_IP="piko"
+HM_PIKO_USER=
+HM_PIKO_SECRET=
+
+# IP address/hostname of CCU device (CCU1, CCU2, RaspberryMatic)
+HM_CCU_IP="homematic-ccu2"
+
+# Name of the CCU variable prefix used
+HM_CCU_PIKO_VAR="Piko"
+
+# number of seconds to wait between iterations
+# (will run hm_pdetect in an endless loop)
+HM_INTERVAL_TIME="15"
+
+# maximum number of iterations if running in interval mode
+# (default: 0=unlimited)
+HM_INTERVAL_MAX="0"
+
+# where to save the process ID in case hm_kostalpiko runs as
+# a daemon
+HM_DAEMON_PIDFILE="/tmp/hm_kostalpiko.pid"
+
+# Processing logfile output name
+# (default: no output)
+HM_PROCESSLOG_FILE=
+
+# maximum number of lines the logfile should contain
+# (default: 500 lines)
+HM_PROCESSLOG_MAXLINES="500"

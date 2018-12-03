@@ -1,0 +1,140 @@
+<html lang="de">
+<head>
+	<meta charset="ISO-8859-1">
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="settings">
+  <meta name="author" content="dev@jagel.net">
+  <meta name="language" content="de, german">
+	<!-- Bootstrap core CSS -->
+	<link href="../public/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../public/css/bootstrap-slider.min.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="../public/css/custombootstrap.css" rel="stylesheet">
+	<link href="../public/css/custom.css" rel="stylesheet">
+  <title>HM-kostalpiko Addon</title>
+</head>
+<body  style="zoom: 1; margin-top: 60px;"> 
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="../index.html"  target="_blank"><img src="../public/img/logo.png" alt=""> &nbsp;
+ &nbsp;</a>
+      </div>
+   <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav ">
+        <li><a href="../index.html">Über</a></li>
+        <li><a href="logoutput.cgi">Logfile</a></li>
+        <li class="active"><a href="settings.cgi">Konfiguration</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="en.settings.cgi">English</a></li>
+      </ul>        
+     </div><!--/.nav-collapse -->
+  </div><!-- class="container" -->
+</div><!-- class="navbar ..." -->
+<div class="container center1 col-md-8" id="content"> 
+<legend>KOSTAL Piko Wechselrichter Statusinformation - Konfiguration</legend>
+<div class="well well-s">
+
+<form class='form-horizontal' name='f_edit' id='f_edit'  action="settings.cgi" method="get">
+<fieldset>
+       
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-3 control-label" for="HM_PIKO_IP" id="HM_PIKO_IP-Label">KOSTAL Piko Hostnamen/IPs:</label>
+  <div class="col-md-4">
+  <input id="HM_PIKO_IP" name="HM_PIKO_IP" type="text" placeholder="z.B. 'piko'" class="form-control input-md" value="<%HM_PIKO_IP%>">
+  <span class="help-block">Standardwert: 'piko'</span>
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-3 control-label" for="HM_PIKO_USER" id="HM_PIKO_USER-Label">KOSTAL Piko Zugangsdaten:</label>
+  <div class="col-md-4">
+  <input id="HM_PIKO_USER" name="HM_PIKO_USER" type="text" placeholder="Nutzername" class="form-control input-md" value="<%HM_PIKO_USER%>">
+  <span class="help-block">Standardwert: leer (kein Nutzername notwendig)</span>  
+  </div>
+  <div class="col-md-3">
+  <input id="HM_PIKO_SECRET" name="HM_PIKO_SECRET" type="password" placeholder="Passwort" class="form-control input-md" value="<%HM_PIKO_SECRET%>">
+  <span class="help-block">Standardwert: leer (kein Passwort notwendig)</span>
+  </div>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-3 control-label" for="HM_INTERVAL_TIME" id="HM_INTERVAL_TIME-Label">Automatische AusfŸhrung:</label>
+  <div class="col-md-8">
+    <input id="HM_INTERVAL_TIME" name="HM_INTERVAL_TIME" type="text" style="width:100%" data-slider-min="0" data-slider-max="1800" data-slider-step="5" data-slider-value="<%HM_INTERVAL_TIME%>" data-slider-enabled="true"/>
+    <span class="help-block">Standardwert: 15s (Ausführung alle 15 Sekunden)</span>
+  </div>
+</div>
+<!-- Separator-->
+<div class="form-group">
+  <label class="col-md-3 control-label"><u>CCU-Variableneinstellungen</u></label>
+</div>
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-3 control-label" for="HM_CCU_PIKO_VAR" id="HM_CCU_PIKO_VAR-Label">Variablenprefix:</label>
+  <div class="col-md-4">
+    <input id="HM_CCU_PIKO_VAR" name="HM_CCU_PIKO_VAR" type="text" placeholder="z.B. 'Piko'" class="form-control input-md" value="<%HM_CCU_PIKO_VAR%>">
+    <span class="help-block">Standardwert: 'Piko'</span>
+  </div>
+</div>
+<!-- Button -->
+<div class="form-group">
+  <label class="control-label col-md-3" for="button1id"> </label>
+<div class="controls">
+    <button type="submit" id="save" name="command" value="save" class="btn btn-default btn-customedit custom1" >
+      <span class="glyphicon glyphicon-ok"></span>   Speichern</button>
+     <noscript> 
+    <button type="submit" id="defaults" name="command" value="defaults" class="btn btn-default btn-customdelete custom1">
+    </noscript>
+    <script type="text/javascript">document.write("<button type=\"button\" id=\"defaults\" name=\"defaults\"  value='defaults' class=\"btn btn-default btn-customdelete custom1\" onclick=\"check()\">");
+    </script> Werkseinstellungen</button>
+    <script type="text/javascript">document.write("<button type=\"reset\" id=\"reset\" name=\"reset\"  value='reset' class=\"btn btn-default btn-customdelete custom1\" onclick=\"\">  Abbrechen</button>");</script>
+</div> 
+</div>
+</fieldset>
+</form>
+
+</div><!--div class="well"--> 
+</div><!--div class="container"--> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="../public/js/bootstrap.min.js"></script>
+<script src="../public/js/bootstrap-slider.min.js"></script>
+<script type="text/javascript">
+
+$('#HM_INTERVAL_TIME').slider({
+  formatter: function(value) {
+    if(value == 0) {
+      return "Deaktiviert";
+    } else {
+      if(value >= 60) {
+        return "Alle " + new Date(value * 1000).toISOString().substr(14, 5) + " min";
+      } else {
+        return "Alle " + value + " s";
+      }
+    }
+  },
+  tooltip: 'always',
+  focus: true,
+  scale: 'logarithmic',
+});
+
+function check () {
+  $('#HM_PIKO_IP').val("");
+  $('#HM_PIKO_USER').val("");
+  $('#HM_PIKO_SECRET').val("");
+  $('#HM_INTERVAL_TIME').slider('setValue', 15);
+  $('#HM_CCU_PIKO_VAR').val("");
+}
+</script>
+</body>
+</html>
