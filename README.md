@@ -1,5 +1,11 @@
 ## KOSTAL Piko status information for HomeMatic - hm_kostalpiko
 
+[![Release](https://img.shields.io/github/release/H2CK/hm_kostalpiko.svg)](https://github.com/H2CK/hm_kostalpiko/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/H2CK/hm_kostalpiko/latest/total.svg)](https://github.com/H2CK/hm_kostalpiko/releases/latest)
+[![Issues](https://img.shields.io/github/issues/H2CK/hm_kostalpiko.svg)](https://github.com/H2CK/hm_kostalpoiko/issues)
+[![License](http://img.shields.io/:license-lgpl3-blue.svg?style=flat)](http://www.gnu.org/licenses/lgpl-3.0.html)
+[![Donate](https://img.shields.io/badge/donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QRSDVQA2UMJQC&source=url)
+
 This CCU-Addon reads the current status informationen from a KOSTAL Piko inverter an provides these informations as system variables within the HomeMatic CCU environment.
 
 ## Features
