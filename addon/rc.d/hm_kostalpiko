@@ -20,11 +20,11 @@ start() {
   # set path settings to let it search in the bin directory as well.
   export PATH="${ADDONDIR}/bin:${PATH}"
 
-  # run hm_pdetect in daemon mode
+  # run hm_kostalpiko in daemon mode
   ${ADDONDIR}/bin/hm_kostalpiko.sh start >/dev/null 2>&1
 }
 
-# function that stops/kills hm_pdetect
+# function that stops/kills hm_kostalpiko
 stop() {
   # default settings (will be overwritten by config file)
   export CONFIG_FILE="${ADDONDIR}/etc/hm_kostalpiko.conf"

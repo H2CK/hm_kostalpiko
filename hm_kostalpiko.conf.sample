@@ -11,7 +11,7 @@ HM_CCU_IP="homematic-ccu2"
 HM_CCU_PIKO_VAR="Piko"
 
 # number of seconds to wait between iterations
-# (will run hm_pdetect in an endless loop)
+# (will run hm_kostalpiko in an endless loop)
 HM_INTERVAL_TIME="15"
 
 # maximum number of iterations if running in interval mode
