@@ -9,7 +9,7 @@
 # The script will set several system variables for the current status of the
 # KOSTAL Piko inverter.
 #
-# Copyright (C) 2018 Thorsten Jagel <dev@jagel.net>
+# Copyright (C) 2018-2020 Thorsten Jagel <dev@jagel.net>
 #
 # This script is based on similar functionality and combines the functionality of
 # these projects into a single script:
@@ -17,8 +17,8 @@
 # https://github.com/jens-maus/hm_pdetect
 #
 
-VERSION="0.1"
-VERSION_DATE="Dec 01 2018"
+VERSION="0.2"
+VERSION_DATE="Jan 19 2020"
 
 #####################################################
 # Main script starts here, don't modify from here on
@@ -464,7 +464,7 @@ function run_kostalpiko()
 # main processing starts here
 #
 echo "hm_kostalpiko ${VERSION} - a HomeMatic script to query current state information from KOSTAL Piko Inverter"
-echo "(${VERSION_DATE}) Copyright (C) 2018 Thorsten Jagel <dev@jagel.net>"
+echo "(${VERSION_DATE}) Copyright (C) 2018-2020 Thorsten Jagel <dev@jagel.net>"
 echo
 
 # lets enter an endless loop to implement a

@@ -19,6 +19,7 @@ start() {
 
   # set path settings to let it search in the bin directory as well.
   export PATH="${ADDONDIR}/bin:${PATH}"
+  export LD_LIBRARY_PATH="${ADDONDIR}/bin:${LD_LIBRARY_PATH}"
 
   # run hm_kostalpiko in daemon mode
   ${ADDONDIR}/bin/hm_kostalpiko.sh start >/dev/null 2>&1
@@ -31,6 +32,7 @@ stop() {
 
   # set path settings to let it search in the bin directory as well.
   export PATH="${ADDONDIR}/bin:${PATH}"
+  export LD_LIBRARY_PATH="${ADDONDIR}/bin:${LD_LIBRARY_PATH}"
 
   # stop/kill hm_kostalpiko
   ${ADDONDIR}/bin/hm_kostalpiko.sh stop >/dev/null 2>&1
@@ -54,7 +56,7 @@ case "$1" in
 
   info)
     echo "Info: <b>KOSTAL Piko Statusinformations Addon</b><br>"
-    echo "Info: (c) 2018 Thorsten Jagel<br>"
+    echo "Info: (c) 2018-2020 Thorsten Jagel<br>"
     echo "Info: <a href='http://github.com/H2CK/hm_kostalpiko'>http://github.com/H2CK/hm_kostalpiko</a>"
     echo "Version: $(cat ${WWWDIR}/VERSION)"
     echo "Name: hm_kostalpiko"
